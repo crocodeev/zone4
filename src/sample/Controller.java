@@ -10,8 +10,7 @@ public class Controller {
 
     Model model = new Model();
 
-    @FXML
-    private TextField output;
+
     @FXML
     private ChoiceBox portList;
 
