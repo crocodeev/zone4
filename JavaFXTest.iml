@@ -10,7 +10,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../javaLibs/jSSC/jSSC-2.7.0-Release/jssc.jar!/" />
+          <root url="jar://$MODULE_DIR$/../javaLib/jSSC-2.7.0-Release/jSSC-2.7.0-Release/jssc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../javaLib/jSerialComm-2.5.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

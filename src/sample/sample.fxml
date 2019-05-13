@@ -46,6 +46,11 @@
                   <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
                </HBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#send" prefWidth="150.0" text="SEND">
+               <HBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <HBox layoutX="-7.0" layoutY="74.0" prefHeight="135.0" prefWidth="761.0" />
