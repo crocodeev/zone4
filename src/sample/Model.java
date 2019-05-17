@@ -4,6 +4,8 @@ import com.fazecast.jSerialComm.SerialPort;
 import jssc.SerialPortException;
 import jssc.SerialPortList;
 
+import java.io.IOException;
+
 public class Model {
 
     public String[] getPortList() {
@@ -22,26 +24,22 @@ public class Model {
         }
     }
 
-    public void sendCommand(String comName) {
+    public void sendCommand (String portName) {
 
-        Integer message = 1;
-        byte messageInByte = message.byteValue();
-
-        SerialPort serialPort = SerialPort.getCommPort(comName);
+        SerialPort serialPort = SerialPort.getCommPort(portName);
         serialPort.setComPortParameters(9600,8,1,0);
-        //serialPort.setComPortTimeouts(SerialPort.TIMEOUT_WRITE_BLOCKING,0,0);
+        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_NONBLOCKING,0,0);
 
         serialPort.openPort();
-        serialPort.getOutputStream().write(messageInByte);
+        try {
+            serialPort.getOutputStream().write("$aM01".getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         serialPort.closePort();
 
-
     }
 
-    public com.fazecast.jSerialComm.SerialPort[] getAnothePortList(){
 
-        com.fazecast.jSerialComm.SerialPort[] pList = com.fazecast.jSerialComm.SerialPort.getCommPorts();
 
-        return pList;
-    }
 }

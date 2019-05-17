@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf;
 
 public class Controller {
 
@@ -19,11 +20,9 @@ public class Controller {
     @FXML
     private void submit(ActionEvent actionEvent) {
 
-        //String[] list = model.getPortList();
+        String[] list = model.getPortList();
 
-        //System.out.println(list[0]);
-
-        Object[] list = model.getAnothePortList();
+        System.out.println(list[0]);
 
         portList.getItems().addAll(list);
     }
@@ -31,9 +30,9 @@ public class Controller {
     @FXML
     private void send(ActionEvent actionEvent) {
 
-        String comName = portList.getValue().toString();
+        String portName = portList.getValue().toString();
 
-        model.sendCommand(comName);
+        model.sendCommand(portName);
 
     }
 }
