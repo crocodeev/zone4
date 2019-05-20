@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import kotlin.reflect.jvm.internal.impl.metadata.ProtoBuf;
 
 public class Controller {
@@ -35,4 +36,15 @@ public class Controller {
         model.sendCommand(portName);
 
     }
+
+    @FXML
+    private void rotation(ActionEvent actionEvent){
+
+        String value = actionEvent.getSource().
+
+        System.out.println(value);
+
+
+    }
+
 }

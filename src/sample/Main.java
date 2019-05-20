@@ -13,6 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("ZONE4 CONTROLLER");
+        root.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
